@@ -16,7 +16,7 @@ export default function NavBar() {
           </div>
           <h1 className="text-[1.5rem] font-semibold mb-4">Bangkok Asset</h1>
         </div>
-        <div className="flex bg-[#fd5631] hover:bg-[#fd390e] cursor-pointer hover:shadow-lg hover:shadow-[#fd5631]/30 text-white font-medium px-3 py-1 rounded transition-all duration-200 ease-in-out items-center justify-center text-sm">
+        <div className="flex h-9 my-auto bg-[#fd5631] hover:bg-[#fd390e] cursor-pointer hover:shadow-lg hover:shadow-[#fd5631]/30 text-white font-medium px-3 py-1 rounded transition-all duration-200 ease-in-out items-center justify-center text-sm">
           <svg
             className="mr-1 w-3 h-3"
             fill="none"
