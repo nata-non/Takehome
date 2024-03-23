@@ -9,7 +9,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center">
       <NavBar />
       <HeroSection />
-      <Carousel></Carousel>
+      <Carousel />
       <div className="flex items-center justify-center w-full h-96 bg-fixed bg-cover">
         <h1>Hello</h1>
       </div>
