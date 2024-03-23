@@ -8,6 +8,7 @@ import {
   FaChevronRight,
 } from "react-icons/fa";
 import { MdArrowForward } from "react-icons/md";
+import { CiHeart } from "react-icons/ci";
 
 const images = [
   "/assets/images/section3/poolvilla1.jpg",
@@ -22,6 +23,7 @@ type PropertyDetailsType = {
   parking: number;
   sqm: number;
   info: string;
+  butType: string;
 } | null;
 const data: PropertyDetailsType[] = [
   {
@@ -33,6 +35,7 @@ const data: PropertyDetailsType[] = [
     parking: 1,
     sqm: 140,
     info: "Sagittis faucibus feugiat integer quam vel ornare. Tellus, vel consequat, sagittis ut penatibus urna, ante. Mattis fermentum lectus sed nisl ac viverra lacus. A at iaculis etiam nunc, diam urna in.",
+    butType: "Sale for $160,000",
   },
   {
     for: "FOR RENT",
@@ -43,6 +46,7 @@ const data: PropertyDetailsType[] = [
     parking: 2,
     sqm: 126,
     info: "Blandit lorem dictum in velit. Et nisi at faucibus mauris pretium enim. Risus sapien nisi aliquam egestas leo dignissim ut quis ac. Amet, cras orci justo, tortor nisl aliquet.",
+    butType: "Rent form $2,850",
   },
 ];
 
@@ -87,7 +91,7 @@ export default function Carousel() {
       </div>
 
       <div className="flex gap-4 items-start" key={currentIndex}>
-        <div>
+        <div className="relative">
           <div className="py-6">
             <Image
               src={images[currentIndex]}
@@ -96,6 +100,14 @@ export default function Carousel() {
               alt="Property Image"
               className="rounded-lg shadow-lg animate-fadein"
             />
+          </div>
+          <div className="absolute top-5 left-0 m-4 space-x-2">
+            <span className="bg-green-500 text-white text-xs font-medium px-3 py-1 rounded-md uppercase animate-fadein">
+              New
+            </span>
+            <span className="bg-blue-500 text-white text-xs font-medium px-3 py-1 rounded-md uppercase animate-fadein">
+              Verified
+            </span>
           </div>
 
           <div className="flex gap-2">
@@ -113,6 +125,7 @@ export default function Carousel() {
             </div>
           </div>
         </div>
+
         {propertyDetails && (
           <div className="flex flex-col p-4 max-w-[420px]">
             <p
@@ -151,6 +164,21 @@ export default function Carousel() {
                 </div>
               )}
               <p className="text-sm mb-4">{propertyDetails.info}</p>
+            </div>
+            <div
+              className={`flex divide-x-[0.1px] max-w-[250px] ${
+                propertyDetails.butType
+                  ? "visible animate-scaleUp"
+                  : "invisible"
+              }`}
+            >
+              <button className="bg-[#fd5631] hover:shadow-lg hover:shadow-[#fd5631]/30 text-white font-semibold py-2 px-4 rounded-l-lg transition-shadow duration-300 ease-in-out">
+                {propertyDetails.butType}
+              </button>
+
+              <button className="bg-[#fd5631] hover:shadow-lg hover:shadow-[#fd5631]/30 text-white p-2 rounded-r-lg hover:bg-[#fd390e] transition-shadow">
+                <CiHeart size={24} />
+              </button>
             </div>
           </div>
         )}
