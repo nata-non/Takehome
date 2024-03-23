@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function NavBar() {
   return (
-    <div className="flex fixed top-0 min-w-full bg-white py-4 z-50">
+    <div className="flex fixed top-0 min-w-full bg-white py-2 z-50">
       <div className="flex justify-between mx-auto w-full max-w-[1300px] ">
-        <div className="flex gap-2 cursor-pointer">
+        <div className="flex mt-2 gap-2 cursor-pointer">
           <div>
             <Image
               src="/assets/searchIcon.webp"
@@ -16,9 +16,9 @@ export default function NavBar() {
           </div>
           <h1 className="text-[1.5rem] font-semibold mb-4">Bangkok Asset</h1>
         </div>
-        <div className="flex bg-[#fd5631] hover:bg-[#fd390e] cursor-pointer hover:shadow-lg hover:shadow-[#fd5631]/30 text-white font-medium px-4 rounded transition-all duration-200 ease-in-out items-center justify-center">
+        <div className="flex bg-[#fd5631] hover:bg-[#fd390e] cursor-pointer hover:shadow-lg hover:shadow-[#fd5631]/30 text-white font-medium px-3 py-1 rounded transition-all duration-200 ease-in-out items-center justify-center text-sm">
           <svg
-            className="mr-2 -ml-1 w-4 h-4"
+            className="mr-1 w-3 h-3"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -31,7 +31,7 @@ export default function NavBar() {
               d="M12 4v16m8-8H4"
             ></path>
           </svg>
-          <p>Addproperty</p>
+          <p>Add Property</p>
         </div>
       </div>
     </div>
