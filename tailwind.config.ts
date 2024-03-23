@@ -8,6 +8,44 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        dynamic: "calc(1.3rem + 0.6vw)",
+      },
+      keyframes: {
+        fadein: {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
+        fadeinleft: {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(-10%)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+        fadeindrop: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-100%)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animation: {
+        fadeinleft: "fadeinleft 800ms ease-out",
+        fadeindrop: "fadeindrop 0.5s ease-out forwards",
+        fadein: "fadein 400ms ease-in-out",
+      },
       backgroundImage: {
         "hero-pattern": "url('/assets/images/section1/hero-image.jpg')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
