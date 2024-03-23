@@ -12,6 +12,16 @@ const config: Config = {
         dynamic: "calc(1.3rem + 0.6vw)",
       },
       keyframes: {
+        scaleUp: {
+          "0%": {
+            scale: "0.8",
+            opacity: "0",
+          },
+          "100%": {
+            scale: "1",
+            opacity: "1",
+          },
+        },
         fadein: {
           "0%": {
             opacity: "0",
@@ -45,6 +55,7 @@ const config: Config = {
         fadeinleft: "fadeinleft 800ms ease-out",
         fadeindrop: "fadeindrop 0.5s ease-out forwards",
         fadein: "fadein 400ms ease-in-out",
+        scaleUp: "scaleUp 800ms ease-out",
       },
       backgroundImage: {
         "hero-pattern": "url('/assets/images/section1/hero-image.jpg')",
