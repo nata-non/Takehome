@@ -18,7 +18,7 @@ interface ArrowProps {
 
 const ArrowLeft: FunctionComponent<ArrowProps> = ({ onClick }) => (
   <div
-    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white hover:bg-gray-100 p-4 flex items-center justify-center rounded-full shadow-lg cursor-pointer transition-all hover:text-[#fd5631]"
+    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white hover:bg-gray-100 p-[9px] flex items-center justify-center rounded-full shadow-lg cursor-pointer transition-all hover:text-[#fd5631]"
     onClick={onClick}
   >
     <FaChevronLeft />
@@ -27,7 +27,7 @@ const ArrowLeft: FunctionComponent<ArrowProps> = ({ onClick }) => (
 
 const ArrowRight: FunctionComponent<ArrowProps> = ({ onClick }) => (
   <div
-    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white hover:bg-gray-100 p-4 flex items-center justify-center rounded-full shadow-lg cursor-pointer transition-all hover:text-[#fd5631]"
+    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white hover:bg-gray-100 p-[9px] flex items-center justify-center rounded-full shadow-lg cursor-pointer transition-all hover:text-[#fd5631]"
     onClick={onClick}
   >
     <FaChevronRight />
@@ -101,7 +101,7 @@ export default function section4() {
   };
 
   return (
-    <div className="relative mx-auto w-full max-w-[1300px] mb-12 overflow-visible">
+    <div className="relative mx-auto w-full max-w-[1300px] px-3 mb-12 overflow-visible">
       <div className="flex justify-between">
         <h1 className="text-center text-2xl font-semibold my-8">Top offers</h1>
         <a className="text-center text-base flex items-center justify-center gap-2 cursor-pointer transition-all hover:text-[#fd5631] my-8">
@@ -130,7 +130,7 @@ export default function section4() {
         {data.map((item, index) => (
           <div
             key={index}
-            className="mx-4 border rounded-lg my-12 overflow-hidden flex flex-col group shadow-lg cursor-pointer" // Group class for hover state
+            className="mx-4 border rounded-lg my-12 overflow-hidden flex flex-col group shadow-lg cursor-pointer "
           >
             <div className="relative w-full h-56">
               <div className="absolute inset-0 bg-[#1f1b2d] opacity-0 group-hover:opacity-45 rounded-lg transition-opacity"></div>

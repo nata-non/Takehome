@@ -80,9 +80,9 @@ export default function Carousel() {
   }, [currentIndex]);
 
   return (
-    <div className="mx-auto w-full max-w-[1300px] mb-12">
+    <div className="mx-auto w-full max-w-[1300px] mb-12 px-3">
       <div className="flex justify-between">
-        <h1 className="text-center text-2xl font-semibold my-8">
+        <h1 className="text-xl md:text-2xl font-semibold my-8">
           Newly listed properties
         </h1>
         <a className="text-center text-base flex items-center justify-center gap-2 cursor-pointer transition-all hover:text-[#fd5631] my-8">
@@ -90,7 +90,7 @@ export default function Carousel() {
         </a>
       </div>
 
-      <div className="flex gap-4 items-start" key={currentIndex}>
+      <div className="md:flex gap-4 items-start" key={currentIndex}>
         <div className="relative">
           <div className="py-6">
             <Image
@@ -127,7 +127,7 @@ export default function Carousel() {
         </div>
 
         {propertyDetails && (
-          <div className="flex flex-col p-4 max-w-[420px]">
+          <div className="flex flex-col p-4 w-full md:max-w-[420px]">
             <p
               className="text-base text-[#fd5631] mb-2 transition-all animate-fadeindrop"
               style={{ animationDelay: "800ms" }}
