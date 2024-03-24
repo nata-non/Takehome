@@ -2,37 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
 .custom-dot-list-style {
   display: flex;
   justify-content: center;
-  margin-top: 20px; /* Adjust the spacing above the dots as needed */
+  margin-top: 20px; 
 }
 
 .custom-dot-list-style .react-multi-carousel-dot button {
-  background: #ccc; /* Inactive dot color */
+  background: #ccc;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -42,7 +19,7 @@
 }
 
 .custom-dot-list-style .react-multi-carousel-dot--active button {
-  background: #333; /* Active dot color */
+  background: #333; 
 }
 
 @layer utilities {

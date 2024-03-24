@@ -1,11 +1,10 @@
 import Image from "next/image";
-import { FaChevronRight } from "react-icons/fa";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";
 import { TiSocialFacebook } from "react-icons/ti";
 import { FaTwitter } from "react-icons/fa";
 import { BiLogoTelegram } from "react-icons/bi";
-import { FaPhoneSquareAlt } from "react-icons/fa"; // Example of a phone square icon
+import { FaPhoneSquareAlt } from "react-icons/fa";
 
 export default function Contact() {
   return (

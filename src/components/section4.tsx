@@ -1,6 +1,3 @@
-// import { Carousel } from "flowbite-react";
-import { Card } from "flowbite-react";
-import Image from "next/image";
 import { FunctionComponent } from "react";
 import {
   FaBath,
@@ -8,7 +5,6 @@ import {
   FaCar,
   FaChevronLeft,
   FaChevronRight,
-  FaImages,
   FaMoneyBillWave,
 } from "react-icons/fa";
 import { MdArrowForward } from "react-icons/md";
