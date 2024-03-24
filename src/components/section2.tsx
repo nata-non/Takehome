@@ -143,7 +143,7 @@ export default function Section2() {
 
               <div className="w-full flex flex-col md:grid md:grid-cols-2 gap-4">
                 {item.horizontal.map((item, idx) => (
-                  <div className="relative ">
+                  <div key={idx} className="relative ">
                     <img
                       key={idx}
                       src={item.imgUrl}
