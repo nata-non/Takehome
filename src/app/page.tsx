@@ -4,6 +4,7 @@ import NavBar from "../components/navBar";
 import Carousel from "@/components/carousel";
 import HeroSection from "@/components/herosection";
 import Slider from "@/components/section4";
+import BackToTopButton from "@/components/toTopButton";
 
 export default function Home() {
   return (
@@ -11,17 +12,8 @@ export default function Home() {
       <NavBar />
       <HeroSection />
       <Carousel />
-
       <Slider />
-      <div className="flex items-center justify-center w-full h-96 bg-fixed bg-cover">
-        <h1>Hello</h1>
-      </div>
-      <div className="flex items-center justify-center w-full h-96 bg-fixed bg-cover">
-        <h1>Hello</h1>
-      </div>
-      <div className="flex items-center justify-center w-full h-96 bg-fixed bg-cover">
-        <h1>Hello</h1>
-      </div>
+      <BackToTopButton />
     </main>
   );
 }
