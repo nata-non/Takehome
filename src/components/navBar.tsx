@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function NavBar() {
   return (
-    <div className="flex fixed top-0 min-w-full bg-white py-2 z-50">
+    <div className="flex fixed top-0 min-w-full bg-white py-2 z-50 px-3">
       <div className="flex justify-between mx-auto w-full max-w-[1300px] ">
         <div className="flex mt-2 gap-2 cursor-pointer">
           <div>
