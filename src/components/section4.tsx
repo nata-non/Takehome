@@ -130,7 +130,7 @@ export default function section4() {
         {data.map((item, index) => (
           <div
             key={index}
-            className="mx-4 border rounded-lg overflow-hidden flex flex-col group shadow-lg cursor-pointer" // Group class for hover state
+            className="mx-4 border rounded-lg my-12 overflow-hidden flex flex-col group shadow-lg cursor-pointer" // Group class for hover state
           >
             <div className="relative w-full h-56">
               <div className="absolute inset-0 bg-[#1f1b2d] opacity-0 group-hover:opacity-45 rounded-lg transition-opacity"></div>
