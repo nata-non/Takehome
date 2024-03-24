@@ -5,6 +5,7 @@ import Carousel from "@/components/carousel";
 import HeroSection from "@/components/herosection";
 import Slider from "@/components/section4";
 import BackToTopButton from "@/components/toTopButton";
+import Contact from "@/components/contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Carousel />
       <Slider />
       <BackToTopButton />
+      <Contact />
     </main>
   );
 }
