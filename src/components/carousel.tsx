@@ -80,7 +80,7 @@ export default function Carousel() {
   }, [currentIndex]);
 
   return (
-    <div className="mx-auto w-full max-w-[1300px]">
+    <div className="mx-auto w-full max-w-[1300px] mb-12">
       <div className="flex justify-between">
         <h1 className="text-center text-2xl font-semibold my-8">
           Newly listed properties
