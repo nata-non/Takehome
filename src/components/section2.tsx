@@ -148,7 +148,7 @@ export default function Section2() {
                       key={idx}
                       src={item.imgUrl}
                       alt={`Horizontal Slide ${index}-${idx}`}
-                      className="w-full rounded-lg object-cover md:h-[196px]" // Adjust height as needed
+                      className="w-full rounded-lg object-cover md:h-[196px]"
                     />
                     <div className="absolute w-full h-full bottom-0 left-0 bg-gradient-to-b from-transparent via-gray-900/10 to-gray-900/100 bg-opacity-10 text-white p-4">
                       <div className="absolute bottom-0 left-0 p-4">
