@@ -27,3 +27,9 @@
     text-wrap: balance;
   }
 }
+@media (max-width: 640px) { /* Adjust 640px based on your needs */
+  .bg-hero-pattern {
+    background-position: center center; /* Adjust as needed for mobile */
+  }
+}
+
