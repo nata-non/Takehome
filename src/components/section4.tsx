@@ -3,6 +3,9 @@ import { Card } from "flowbite-react";
 import Image from "next/image";
 import { FunctionComponent } from "react";
 import {
+  FaBath,
+  FaBed,
+  FaCar,
   FaChevronLeft,
   FaChevronRight,
   FaImages,
@@ -33,7 +36,7 @@ const ArrowRight: FunctionComponent<ArrowProps> = ({ onClick }) => (
     <FaChevronRight />
   </div>
 );
-export default function section4() {
+export default function Section4() {
   const data = [
     {
       imageUrl: "/assets/images/section4/offer1.jpg",
@@ -41,8 +44,13 @@ export default function section4() {
       title: "3 Bed Apartment | 67 sq.m",
       location: "Ladprao 71 Krunthep 10230",
       isNew: false,
-      isVerified: false,
+      isVerified: true,
+      isFeatured: false,
       price: "123,142",
+      bed: 2,
+      toilet: 2,
+      parking: 2,
+      sqm: 126,
     },
     {
       imageUrl: "/assets/images/section4/offer2.jpg",
@@ -50,8 +58,13 @@ export default function section4() {
       title: "Family Home | 120 sq.m",
       location: "Ladprao 71 Krunthep 10230",
       isNew: false,
-      isVerified: false,
+      isVerified: true,
+      isFeatured: true,
       price: "20,000",
+      bed: 4,
+      toilet: 2,
+      parking: 2,
+      sqm: 126,
     },
     {
       imageUrl: "/assets/images/section4/offer3.jpg",
@@ -60,7 +73,12 @@ export default function section4() {
       location: "140-60 Beech Ave Flushing, NY 11355",
       isNew: false,
       isVerified: true,
+      isFeatured: false,
       price: "1,234",
+      bed: 1,
+      toilet: 1,
+      parking: 1,
+      sqm: 126,
     },
     {
       imageUrl: "/assets/images/section4/offer4.jpg",
@@ -68,17 +86,26 @@ export default function section4() {
       title: "Studio : 32 sq.m",
       location: "42 Broadway New York, NY 10004",
       isNew: false,
-      isVerified: false,
+      isVerified: true,
+      isFeatured: true,
       price: "150,000",
+      bed: 2,
+      toilet: 2,
+      parking: 1,
+      sqm: 126,
     },
     {
       imageUrl: "/assets/images/section4/offer5.jpg",
       for: "FOR SELL",
       title: "Cottage : 120 sq.m",
       location: "3811 Ditmars Blvd Astoria, NY 11105",
-      isNew: false,
-      isVerified: false,
+      isNew: true,
+      isVerified: true,
       price: "70,000",
+      bed: 4,
+      toilet: 2,
+      parking: 2,
+      sqm: 126,
     },
   ];
   const responsive = {
@@ -139,6 +166,25 @@ export default function section4() {
                 alt={`Slide ${index}`}
                 className="w-full h-full object-cover"
               />
+              <div className=" absolute flex flex-col gap-2 top-0 left-0 m-2 ">
+                <span className="bg-green-500 text-white text-xs font-medium px-2 py-1 rounded-md animate-fadein">
+                  Verified
+                </span>
+                <span
+                  className={`bg-blue-500 text-white text-xs font-medium ${
+                    !item.isNew && "hidden"
+                  } px-2 py-1 rounded-md animate-fadein`}
+                >
+                  New
+                </span>
+                <span
+                  className={`bg-[#f23c49] text-white text-xs font-medium ${
+                    !item.isFeatured && "hidden"
+                  } px-2 py-1 rounded-md animate-fadein`}
+                >
+                  Featured
+                </span>
+              </div>
             </div>
             <div className="p-4 flex flex-col justify-between flex-grow">
               <div>
@@ -152,6 +198,24 @@ export default function section4() {
                 <div className="flex items-center gap-2 text-lg font-bold">
                   <FaMoneyBillWave className="text-gray-600" />
                   <p>{item.price}</p>
+                </div>
+              </div>
+              <hr className="my-3" />
+              <div className="flex justify-center items-center gap-2 text-center mb-2">
+                <div className="flex text-gray-600 gap-2 items-center justify-center">
+                  <FaBed />
+                  <span>{item.bed}</span>
+                </div>
+                <div className="flex text-gray-600 gap-2 items-center justify-center">
+                  <FaBath className="ml-4" />
+                  <span>{item.toilet}</span>
+                </div>
+                <div className="flex text-gray-600 gap-2 items-center justify-center">
+                  <FaCar className="ml-4" />
+                  <span>{item.parking}</span>
+                </div>
+                <div className="flex text-gray-600 items-center justify-center">
+                  <span>sq.m</span>
                 </div>
               </div>
             </div>
