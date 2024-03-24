@@ -5,6 +5,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "node_modules/flowbite-react/lib/esm/**/*.js",
   ],
   theme: {
     extend: {
@@ -12,6 +13,22 @@ const config: Config = {
         dynamic: "calc(1.3rem + 0.6vw)",
       },
       keyframes: {
+        slideRight: {
+          "0%": {
+            transform: "translateX(100%)",
+          },
+          "100%": {
+            transform: "translateX(0%)",
+          },
+        },
+        slideLeft: {
+          "0%": {
+            transform: "translateX(0%)",
+          },
+          "100%": {
+            transform: "translateX(-100%)",
+          },
+        },
         scaleUp: {
           "0%": {
             scale: "0.8",
@@ -56,6 +73,8 @@ const config: Config = {
         fadeindrop: "fadeindrop 0.5s ease-out forwards",
         fadein: "fadein 400ms ease-in-out",
         scaleUp: "scaleUp 800ms ease-out",
+        slideRight: "slideRight 0.5s forwards",
+        slideLeft: "slideLeft 0.5s forwards",
       },
       backgroundImage: {
         "hero-pattern": "url('/assets/images/section1/hero-image.jpg')",
@@ -65,6 +84,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
 export default config;

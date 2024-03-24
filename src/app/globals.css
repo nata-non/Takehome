@@ -25,6 +25,25 @@
     )
     rgb(var(--background-start-rgb));
 } */
+.custom-dot-list-style {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust the spacing above the dots as needed */
+}
+
+.custom-dot-list-style .react-multi-carousel-dot button {
+  background: #ccc; /* Inactive dot color */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 0 5px;
+  border: none;
+}
+
+.custom-dot-list-style .react-multi-carousel-dot--active button {
+  background: #333; /* Active dot color */
+}
 
 @layer utilities {
   .text-balance {
